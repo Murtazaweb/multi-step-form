@@ -1,4 +1,13 @@
 import React from 'react'
+
+//import { useState } = "react";   like this 
+
+function toCelsius(fahrenheit) {
+  const [name, setName] = useState("David");
+  return (5/9) * (fahrenheit-32);
+}
+document.getElementById("demo").innerHTML = toCelsius;
+
 import {TextField, Button,FormControlLabel,Radio,FormLabel,RadioGroup,FormControl,Select,
 InputLabel, MenuItem} from "@material-ui/core";
  
@@ -10,6 +19,11 @@ const AddressForm = () => {
 
     //For Selecting gender need to change the state
     const [value, setValue] = React.useState('female');
+ 
+ //instead of calling ReactObject you can use direct react hooks 
+ // const [value, setValue] = useState('female');
+ 
+
   
     const handleChange = (event) => {
       setValue(event.target.value);
